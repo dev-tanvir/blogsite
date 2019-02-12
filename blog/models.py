@@ -11,7 +11,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
-        """ This method is for publishing posts """
+        """ This method is for publishing posts with time"""
         self.published_date = timezone.now()
         self.save()
 
